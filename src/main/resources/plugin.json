@@ -1,0 +1,11 @@
+{
+  "id": "team.rainfall.finality.api",
+  "name": "Finality API for AoH3",
+  "version": "0.1.0",
+  "sdkVersion": ">=1.6.0",
+  "hasTweaker": false,
+  "useLuminosity": true,
+  "tweakClasses": ["team.rainfall.finality.api.mixin.MixinMenuManager","team.rainfall.finality.api.mixin.MixinAA_Game"]
+
+
+}

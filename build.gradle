@@ -1,0 +1,30 @@
+plugins {
+    id 'java'
+    id 'com.github.johnrengelman.shadow' version '8.1.1'
+}
+
+group = 'team.rainfall.finality'
+version = '0.1.0'
+
+repositories {
+    //阿里云镜像
+    maven { url 'https://maven.aliyun.com/repository/public' }
+    maven {
+        url "https://plugins.gradle.org/m2/"
+    }
+    mavenCentral()
+}
+
+dependencies {
+    shadow fileTree(dir:'libs',includes: ['*.jar'])
+    shadow 'com.alibaba.fastjson2:fastjson2:2.0.53'
+}
+jar {
+    enabled = false
+}
+shadowJar {
+    archiveClassifier.set("")
+}
+java{
+    withSourcesJar()
+}
